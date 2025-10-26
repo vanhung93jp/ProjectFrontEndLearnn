@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Personal Portfolio showcasing projects, skills, and contact form." />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- ===== HEADER ===== -->
+  <header>
+    <nav role="navigation" class="navbar">
+      <h1 class="logo">MyPortfolio</h1>
+      <button class="hamburger" aria-label="Toggle Menu">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="#about-me">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== ABOUT ME ===== -->
+  <section id="about-me" class="section">
+    <h2>About Me</h2>
+    <p>Hello! I’m a web developer passionate about creating clean and efficient user experiences. I enjoy turning ideas into reality through code.</p>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+
+    <!-- FILTER BUTTONS -->
+    <div class="filter-buttons">
+      <button data-category="all" class="active">All</button>
+      <button data-category="web">Web</button>
+      <button data-category="app">App</button>
+      <button data-category="design">Design</button>
+    </div>
+
+    <div class="project-grid">
+      <article class="project-card" data-category="web">
+        <figure>
+          <img src="https://via.placeholder.com/300x200" alt="Landing Page Project" class="lightbox-img" />
+          <figcaption>Landing Page (Web)</figcaption>
+        </figure>
+      </article>
+
+      <article class="project-card" data-category="app">
+        <figure>
+          <img src="https://via.placeholder.com/300x200?text=Mobile+App" alt="Mobile App Project" class="lightbox-img" />
+          <figcaption>Mobile App UI (App)</figcaption>
+        </figure>
+      </article>
+
+      <article class="project-card" data-category="design">
+        <figure>
+          <img src="https://via.placeholder.com/300x200?text=Graphic+Design" alt="Graphic Design Project" class="lightbox-img" />
+          <figcaption>Poster Design (Design)</figcaption>
+        </figure>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills" class="section">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>JavaScript</li>
+      <li>React</li>
+      <li>Node.js</li>
+    </ul>
+  </section>
+
+  <!-- ===== CONTACT FORM ===== -->
+  <section id="contact" class="section">
+    <h2>Contact Me</h2>
+    <form id="contact-form">
+      <label for="name">Name:</label>
+      <input id="name" name="name" type="text" required />
+
+      <label for="email">Email:</label>
+      <input id="email" name="email" type="email" required />
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- ===== LIGHTBOX ===== -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" alt="Expanded project view" />
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
